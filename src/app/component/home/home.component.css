@@ -3,24 +3,25 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-span{
+span {
   margin-left: 5px;
   margin-rigt: 5px;
 }
+
 mat-card {
   max-width: 80%;
   margin: 2em auto;
   text-align: center;
 }
 
-button{
+button {
   margin-left: 40px;
-
 }
 
 mat-toolbar-row {
   justify-content: space-between;
 }
+
 .done {
   position: fixed;
   bottom: 20px;

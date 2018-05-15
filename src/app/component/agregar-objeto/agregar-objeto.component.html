@@ -1,0 +1,31 @@
+<h1> Crear Nuevo Objeto</h1>
+<mat-tab-group>
+  <mat-tab label="Ejemplos Inputs">
+    <p>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Company (disabled)" disabled value="Google">
+      </mat-form-field>
+    </p>
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    </mat-form-field>
+  </mat-tab>
+  <mat-tab label="Formulario Crear Objeto">
+    <form #formObjeto="ngForm" (ngSubmit)="crearObjeto()" class="example-form">
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput  #title="ngModel" name="title" [(ngModel)]="objeto.title" [type]="hide" placeholder="Titulo">
+          <mat-error *ngIf="!objeto.touched" >El titulo es obligatorio</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <textarea matInput #thumbnailUrl="ngModel" name="thumbnailUrl" [(ngModel)]="objeto.thumbnailUrl"  placeholder="thumbnailUrl"></textarea>
+        </mat-form-field>
+      </p>
+      <button mat-raised-button color="primary">Crear Objeto </button>
+
+    </form>
+  </mat-tab>
+</mat-tab-group>
