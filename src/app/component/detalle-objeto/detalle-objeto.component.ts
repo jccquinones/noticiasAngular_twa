@@ -20,6 +20,7 @@ export class DetalleObjetoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     console.log('producto-detail.Component.ts cargado...');
 
     this._route.params.forEach((params: Params) => {

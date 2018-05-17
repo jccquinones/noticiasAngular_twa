@@ -3,9 +3,7 @@
 </p>
 <mat-chip-list class="mat-chip-list-stacked">
   <div *ngFor="let opcion of opciones" selected="true">
-    <button style="margin: 5px" mat-raised-button color="{{opcion.color}}">
-      {{opcion.name}}
-    </button>
+    <app-listado></app-listado>
   </div>
 
 </mat-chip-list>
