@@ -4,12 +4,8 @@
 <mat-grid-list cols="2" rowHeight="0.5:0.4" *ngIf="objetos">
   <mat-grid-tile *ngFor="let objeto of objetos; let i = index">
     <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{objeto.title}}</mat-card-title>
-        <!--<img mat-card-mat-image src={{objeto.urlToImage}} alt={{objeto.title}}>-->
-      </mat-card-header>
+      <mat-card-title>{{objeto.title}}</mat-card-title>
       <mat-card-content>
-        <div mat-card-avatar class="example-header-image"></div>
         <img width="400" height="250" src={{objeto.urlToImage}} alt={{objeto.title}}>
         <br>
         <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto',i]">Ver más...</button>
