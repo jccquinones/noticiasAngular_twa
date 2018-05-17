@@ -28,13 +28,13 @@ export class DetalleObjetoComponent implements OnInit {
 
         this.objetosService.getObjeto(id).subscribe(
 
-        result => {
-          // se retornan los articulos de api-news
-          this.objeto = result.articles[id];
-          console.log(result.articles);
-        }
-      )
-      //this.getObjeto(id);
+      result => {
+              // se retornan el articulo desde api-news
+              this.objeto = result.articles[id];
+              console.log(result.articles);
+           }
+        )
+
     }
   }
   getObjeto(id){

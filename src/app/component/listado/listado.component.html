@@ -10,8 +10,9 @@
       </mat-card-header>
       <mat-card-content>
         <div mat-card-avatar class="example-header-image"></div>
+        <img width="400" height="250" src={{objeto.urlToImage}} alt={{objeto.title}}>
+        <br>
         <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto',i]">Ver más...</button>
-        <mat-card-subtitle>Fuente: {{objeto.url}}</mat-card-subtitle>
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
