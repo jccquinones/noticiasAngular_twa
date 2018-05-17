@@ -25,7 +25,7 @@ export class ObjetosService {
 
   getObjeto(id){
     console.log(id);
-    return this._http.get(this.url+'/photos/'+id).map(res => res.json());
+    return this._http.get(this.url).map(res => res.json());
   }
 
   addObjeto(objeto: Objeto){

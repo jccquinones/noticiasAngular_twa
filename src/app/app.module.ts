@@ -28,6 +28,8 @@ import {
 import { HomeComponent } from './component/home/home.component';
 import { ErrorComponent } from './component/error/error.component';
 import { ListadoComponent } from './component/listado/listado.component';
+import { DetalleObjetoComponent } from './component/detalle-objeto/detalle-objeto.component';
+import { AgregarObjetoComponent } from './component/agregar-objeto/agregar-objeto.component';
 
 // Rutas
 import {routing, AppRoutingProviders} from './app.routing';
@@ -35,8 +37,6 @@ import {routing, AppRoutingProviders} from './app.routing';
 // Servicios
 import {GlobalService} from "./service/global.service";
 import {ObjetosService} from "./service/objetos.service";
-import { AgregarObjetoComponent } from './component/agregar-objeto/agregar-objeto.component';
-import { DetalleObjetoComponent } from './component/detalle-objeto/detalle-objeto.component';
 
 @NgModule({
   declarations: [

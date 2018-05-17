@@ -1,3 +1,23 @@
-<p>
-  detalle-objeto works!
-</p>
+
+<h1 *ngIf="objeto">{{objeto.title}}</h1>
+<mat-card class="example-card">
+  <mat-card-header>
+  </mat-card-header>
+  <img mat-card-image src={{objeto.urlToImage}} alt={{objeto.title}}>
+  <mat-card-content>
+    <p>
+      {{objeto.description}}
+    </p>
+    <div>
+      {{objeto.author}}
+    </div>
+    <div>
+      {{objeto.publishedAt}}
+    </div>
+    <div>
+      {{objeto.source[0]}}
+    </div>
+  </mat-card-content>
+</mat-card>
+<br>
+<button mat-raised-button color="warn" [routerLink]="['/listado']">Volver</button>

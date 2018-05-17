@@ -1,18 +1,17 @@
 <div *ngIf="!objetos">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<mat-grid-list cols="1" rowHeight="0.5:0.5" *ngIf="objetos">
+<mat-grid-list cols="2" rowHeight="0.5:0.4" *ngIf="objetos">
   <mat-grid-tile *ngFor="let objeto of objetos; let i = index">
     <mat-card>
       <mat-card-header>
-        <img mat-card-mat-image src={{objeto.urlToImage}} alt="Photo of a Shiba Inu">
+        <mat-card-title>{{objeto.title}}</mat-card-title>
+        <!--<img mat-card-mat-image src={{objeto.urlToImage}} alt={{objeto.title}}>-->
       </mat-card-header>
       <mat-card-content>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{objeto.title}}</mat-card-title>
-        <!--<button mat-raised-button color="warn" [routerLink]="['/detalle-objeto', objeto.author">Ver Objeto</button>-->
-        <mat-card-subtitle>ID: {{objeto.description}}</mat-card-subtitle>
-        {{objeto.descripction}}
+        <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto',i]">Ver más...</button>
+        <mat-card-subtitle>Fuente: {{objeto.url}}</mat-card-subtitle>
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
