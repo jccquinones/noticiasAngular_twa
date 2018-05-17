@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ObjetosService} from '../../service/objetos.service';
 
 @Component({
   selector: 'app-favoritos',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritosComponent implements OnInit {
 
-  constructor() { }
+  public let; favoritos = [];
+
+
+  constructor(private objetoService: ObjetosService) { }
 
   ngOnInit() {
+    this.favoritos = this.objetoService.getFavoritos();
+    console.log(this.favoritos);
+  }
+
+  borrarFavorito(objeto) {
+    this.objetoService.borrarFavorito(objeto);
   }
 
 }

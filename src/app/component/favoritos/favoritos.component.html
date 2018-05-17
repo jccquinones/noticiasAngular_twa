@@ -1,0 +1,17 @@
+<div *ngIf="!favoritos">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<mat-grid-list cols="2" rowHeight="0.5:0.5" *ngIf="favoritos">
+  <mat-grid-tile *ngFor="let objeto of favoritos; let i = index">
+    <mat-card *ngIf="i<24" class="example-card">
+      <mat-card-title>{{objeto.title}}</mat-card-title>
+      <mat-card-content>
+        <img width="400" height="250" src={{objeto.urlToImage}} alt={{objeto.title}}>
+        <button mat-raised-button color="warn" [routerLink]="['/detalle', i]">Ver mas...</button>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<p>
+  <button mat-raised-button color="warn" [routerLink]="['/']"> Volver</button>
+</p>
