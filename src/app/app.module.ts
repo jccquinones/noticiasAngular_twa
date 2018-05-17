@@ -37,6 +37,7 @@ import {routing, AppRoutingProviders} from './app.routing';
 // Servicios
 import {GlobalService} from "./service/global.service";
 import {ObjetosService} from "./service/objetos.service";
+import { FavoritosComponent } from './component/favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {ObjetosService} from "./service/objetos.service";
     ErrorComponent,
     ListadoComponent,
     AgregarObjetoComponent,
-    DetalleObjetoComponent
+    DetalleObjetoComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserAnimationsModule,
