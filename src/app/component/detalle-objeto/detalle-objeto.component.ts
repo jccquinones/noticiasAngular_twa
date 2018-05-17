@@ -14,37 +14,28 @@ export class DetalleObjetoComponent implements OnInit {
   public objeto: Objeto;
 
   constructor(
-    private _objetosService: ObjetosService,
+    private objetosService: ObjetosService,
     private _route: ActivatedRoute,
     private _router: Router
   ) {
-
   }
 
   ngOnInit() {
     console.log('producto-detail.Component.ts cargado...');
 
-    this.getProducto();
-
-  }
-
-  getProducto(){
     this._route.params.forEach((params: Params) => {
-      let id = params['id'];
+      const id = params['id'];
 
-      this._objetosService.getObjeto(id).subscribe(
-        response => {
+      this.objetosService.getObjeto(id).subscribe(
 
-          this.objeto = response;
-          console.log(this.objeto);
-          //this._router.navigate(['/productos']);
-
-        },
-        error => {
-          console.log(<any>error);
+        result => {
+          // se retornan los articulos de api-news
+          this.objeto = result.articles[id];
+          console.log(result.articles);
         }
-      );
-    });
+      )
+      /*this.getObjeto(id);*/
+    }
   }
 
 }

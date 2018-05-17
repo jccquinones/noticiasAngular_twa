@@ -32,4 +32,9 @@ export class ListadoComponent implements OnInit {
 
   }
 
+  /** Recibe un objeto y lo entrega al servicio para guardarlo en localStorage**/
+  agregarFavorito( objeto: Objeto) {
+    this.objetoService.guardarFavorito(objeto);
+  }
+
 }
