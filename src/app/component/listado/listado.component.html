@@ -1,27 +1,19 @@
 <div *ngIf="!objetos">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
-<<<<<<< HEAD
 <mat-grid-list cols="1" rowHeight="0.01:0.01" *ngIf="objetos">
-=======
-<mat-grid-list cols="2" rowHeight="0.5:0.4" *ngIf="objetos">
->>>>>>> f050cc004a9f6f6c9aab3a2c6fffb4547b9bc8eb
   <mat-grid-tile *ngFor="let objeto of objetos; let i = index">
     <mat-card>
-      <mat-card-title>{{objeto.title}}</mat-card-title>
+      <mat-card-header>
+        <img mat-card-mat-image src={{objeto.urlToImage}} alt="Photo of a Shiba Inu">
+      </mat-card-header>
       <mat-card-content>
-<<<<<<< HEAD
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{objeto.title}}</mat-card-title>
         <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto', i]">Ver Más</button>
         <button mat-raised-button color="warn" (click)="agregarFavorito(objeto)">Agregar A favorito</button>
         <mat-card-subtitle class="bg-danger">ID: {{objeto.description}}</mat-card-subtitle>
         {{objeto.descripction}}
-=======
-        <img width="400" height="250" src={{objeto.urlToImage}} alt={{objeto.title}}>
-        <br>
-        <button mat-raised-button color="warn" [routerLink]="['/detalle-objeto',i]">Ver más...</button>
->>>>>>> f050cc004a9f6f6c9aab3a2c6fffb4547b9bc8eb
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
