@@ -17,27 +17,13 @@ export class DetalleObjetoComponent implements OnInit {
     private objetosService: ObjetosService,
     private _route: ActivatedRoute,
     private _router: Router
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
     console.log('producto-detail.Component.ts cargado...');
 
     this._route.params.forEach((params: Params) => {
-<<<<<<< HEAD
-      const id = params['id'];
 
-      this.objetosService.getObjeto(id).subscribe(
-
-        result => {
-          // se retornan los articulos de api-news
-          this.objeto = result.articles[id];
-          console.log(result.articles);
-        }
-      )
-      /*this.getObjeto(id);*/
-    }
-=======
         const id = params['id'];
 
         this.objetosService.getObjeto(id).subscribe(
@@ -51,6 +37,7 @@ export class DetalleObjetoComponent implements OnInit {
 
     }
   }
+
   getObjeto(id){
     // se retornan los articulos de api-news
     /*this.objeto = result.articles[id];
@@ -59,7 +46,7 @@ export class DetalleObjetoComponent implements OnInit {
       let url = params['url'];
 
     });*/
->>>>>>> f050cc004a9f6f6c9aab3a2c6fffb4547b9bc8eb
+
   }
 
 }
